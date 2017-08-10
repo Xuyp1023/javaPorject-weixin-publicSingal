@@ -1,0 +1,35 @@
+CREATE TABLE `t_weixin_publicsingal_effectivelog` (
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '主键Id',
+  `L_OPER_ID` varchar(100) DEFAULT NULL COMMENT '微信传递的operid',
+  `C_BUSIN_STATUS` char(2) DEFAULT NULL COMMENT '是否已经授权  0 未授权  1已经授权',
+  `L_PERSION_ID` bigint(20) DEFAULT NULL COMMENT '从微信获取到用户的详细信息Id',
+  `C_APP_ID` varchar(100) DEFAULT NULL COMMENT '记录微信公众号Id',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+CREATE TABLE `t_weixin_publicsingal_login` (
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT 'Id只增长',
+  `C_APP_ID` varchar(100) DEFAULT NULL COMMENT '公众号Id',
+  `L_OPER_ID` varchar(100) DEFAULT NULL COMMENT '个人Id',
+  `D_REG_DATE` char(8) DEFAULT NULL COMMENT '注册日期',
+  `T_REG_TIME` char(6) DEFAULT NULL COMMENT '注册时间',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+
+CREATE TABLE `t_weixin_publicsingal_person` (
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT 'Id 自动增长',
+  `L_OPER_ID` varchar(100) DEFAULT NULL COMMENT ' operid 公众号对应客户Id',
+  `C_NICK_NAME` varchar(255) DEFAULT NULL COMMENT '关注人昵称',
+  `C_IMAGE_URL` varchar(500) DEFAULT NULL COMMENT '关注人头像图片地址',
+  `C_SEX` char(2) DEFAULT NULL COMMENT '关注人性别',
+  `C_PROVINCE` varchar(255) DEFAULT NULL COMMENT '关注人省份',
+  `C_CITY` varchar(255) DEFAULT NULL COMMENT '城市',
+  `C_COUNTRY` varchar(255) DEFAULT NULL COMMENT '国家',
+  `C_PRIVILEGE` varchar(255) DEFAULT NULL COMMENT '权限',
+  `C_UNIONID` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

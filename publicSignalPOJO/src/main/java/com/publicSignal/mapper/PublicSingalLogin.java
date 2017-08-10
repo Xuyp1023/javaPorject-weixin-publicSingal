@@ -1,4 +1,4 @@
-package com.publicSingal.demo.pojo;
+package com.publicSignal.mapper;
 
 import java.io.Serializable;
 

@@ -19,6 +19,8 @@ CREATE TABLE `t_weixin_publicsingal_login` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
+clean tomcat7:run
+
 
 CREATE TABLE `t_weixin_publicsingal_person` (
   `ID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT 'Id 自动增长',

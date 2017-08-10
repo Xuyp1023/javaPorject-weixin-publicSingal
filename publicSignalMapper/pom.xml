@@ -6,11 +6,43 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>publicSignalMapper</artifactId>
-  <dependencies>
-   <dependency>
-    <groupId>com.xyp.weixin</groupId>
-    <artifactId>publicSignalPOJO</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-   </dependency>
-  </dependencies>
+ 
+  
+  <!-- 依赖的jar包 -->
+	<dependencies>
+	
+	 <dependency>
+	    <groupId>com.xyp.weixin</groupId>
+	    <artifactId>publicSignalPOJO</artifactId>
+	    <version>0.0.1-SNAPSHOT</version>
+	   </dependency>
+		
+		<!-- Mybatis -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.github.miemiedev</groupId>
+			<artifactId>mybatis-paginator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+		</dependency>
+		<!-- MySql -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<!-- 连接池 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+		</dependency>
+	</dependencies>
 </project>

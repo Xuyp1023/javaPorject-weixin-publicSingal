@@ -7,4 +7,16 @@
   </parent>
   <artifactId>publicSignalService</artifactId>
   <packaging>war</packaging>
+  <dependencies>
+   <dependency>
+    <groupId>com.xyp.weixin</groupId>
+    <artifactId>publicSignalInteface</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+   </dependency>
+   <dependency>
+    <groupId>com.xyp.weixin</groupId>
+    <artifactId>publicSignalMapper</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+   </dependency>
+  </dependencies>
 </project>

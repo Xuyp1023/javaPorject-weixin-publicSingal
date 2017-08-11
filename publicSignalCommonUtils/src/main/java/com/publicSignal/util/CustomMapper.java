@@ -3,6 +3,7 @@ package com.publicSignal.util;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.publicSignal.exception.PublicSignalException;
 
 public class CustomMapper extends ObjectMapper{ 
     public CustomMapper() {
@@ -10,4 +11,6 @@ public class CustomMapper extends ObjectMapper{
         // 设置 SerializationFeature.FAIL_ON_EMPTY_BEANS 为 false
         this.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
     }
+    
+    
 }

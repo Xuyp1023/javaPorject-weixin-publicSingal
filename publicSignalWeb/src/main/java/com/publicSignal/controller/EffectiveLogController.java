@@ -9,9 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.publicSignal.mapper.PublicSignalEffectiveLog;
 import com.publicSignal.service.PublicSignalEffectiveLogService;
-import com.publicSignal.util.AjaxObject;
+import com.publicSignal.util.CustomMapper;
 import com.publicSignal.util.ProcessHandler;
 import com.publicSignal.util.ProcessHandler.ExceptionHandler;
 
@@ -44,6 +46,20 @@ public class EffectiveLogController {
         
         System.out.println("test...");
         return "test";
+        
+    }
+    
+    public static void main(String[] args) throws JsonProcessingException {
+        
+        PublicSignalEffectiveLog log=new PublicSignalEffectiveLog();
+        log.setAppid("123dsfd");
+        log.setBusinStatus("2");
+        log.setId(123l);
+        log.setOpenid("dafdafdasfasd");
+        log.setPersionId(213213123l);
+        ObjectMapper mapper=new CustomMapper();
+        String string = mapper.writeValueAsString(log);
+        System.out.println(string);
         
     }
 

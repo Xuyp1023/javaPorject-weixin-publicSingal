@@ -14,7 +14,6 @@ public class AjaxObject implements Serializable{
     // 状态码
     private final static int STATUS_CODE_SUCCESS = 200;
     private final static int STATUS_CODE_FAILURE = 300;
-    private ObjectMapper mapper = new CustomMapper();
     
     private int statusCode = 0;
 
@@ -61,24 +60,10 @@ public class AjaxObject implements Serializable{
         
     }
     
-    public String toJson() {
-        
-        
-        try {
-            System.out.println(this);
-            return mapper.writeValueAsString(this);
-        }
-        catch (JsonProcessingException e) {
-            
-            e.printStackTrace();
-        }
-        
-        return "";
-    }
 
     @Override
     public String toString() {
-        return "AjaxObject [mapper=" + this.mapper + ", statusCode=" + this.statusCode + ", message=" + this.message + ", data=" + this.data + "]";
+        return "AjaxObject [statusCode=" + this.statusCode + ", message=" + this.message + ", data=" + this.data + "]";
     }
     
     

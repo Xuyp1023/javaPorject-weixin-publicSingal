@@ -19,7 +19,7 @@
 	
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="public-signal-web"/>
-	<dubbo:registry protocol="zookeeper" address="192.168.25.154:2181,192.168.25.154:2182,192.168.25.154:2183"/>	
-	<dubbo:reference interface="com.publicSignal.service.ItemService" id="itemService" />
+	<dubbo:registry protocol="zookeeper" address="192.168.2.55:2181"/>	
+	<dubbo:reference interface="com.publicSignal.service.PublicSignalEffectiveLogService" id="publicSignalEffectiveLogService" />
 	
 </beans>

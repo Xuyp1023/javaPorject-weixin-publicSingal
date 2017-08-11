@@ -3,6 +3,7 @@ package com.publicSignal.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.publicSignal.mapper.PublicSignalEffectiveLog;
 import com.publicSignal.mapper.PublicSignalEffectiveLogMapper;
 import com.publicSignal.service.PublicSignalEffectiveLogService;
@@ -23,7 +24,6 @@ public class PublicSignalEffectiveLogServiceImpl implements PublicSignalEffectiv
             return anEffectiveLog;
         }
         catch (Exception e) {
-           
             System.out.println(e.getMessage());
             e.printStackTrace();
         }

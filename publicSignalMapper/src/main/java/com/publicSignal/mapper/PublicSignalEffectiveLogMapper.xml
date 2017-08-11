@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.publicSignal.mapper.PublicSignalEffectiveLogMapper">
+	<resultMap id="BaseResultMap" type="com.publicSignal.mapper.PublicSignalEffectiveLog">
+		
+		<id column="ID" property="id" jdbcType="INTEGER" />
+		<result column="L_OPER_ID" property="operId" jdbcType="VARCHAR" />
+		<result column="C_BUSIN_STATUS" property="businStatus" jdbcType="VARCHAR" />
+		<result column="L_PERSION_ID" property="persionId" jdbcType="INTEGER" />
+		<result column="C_APP_ID" property="appid"
+			jdbcType="VARCHAR" />
+		
+	</resultMap>
+ 
+ <!-- 新增插入日志 -->
+  <insert id="saveAddLog" parameterType="com.publicSignal.mapper.PublicSignalEffectiveLog" >
+   <selectKey order="AFTER" keyProperty="id" resultType="java.lang.Long">
+    SELECT LAST_INSERT_ID()
+   </selectKey>
+   INSERT INTO `t_weixin_publicsingal_effectivelog` (
+     
+     `L_OPER_ID`,
+     `C_BUSIN_STATUS`,
+     `L_PERSION_ID`,
+     `C_APP_ID`
+    )
+    VALUES
+     (
+      
+      #{openid},
+      #{businStatus},
+      #{persionId},
+      #{appid}
+     );
+  
+  </insert>
+</mapper>

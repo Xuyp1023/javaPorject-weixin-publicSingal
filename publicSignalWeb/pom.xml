@@ -94,6 +94,34 @@
 		 <artifactId>junit</artifactId>
 		 <version>4.11</version>
 		</dependency>
+  
+   <!-- pdf 转图片 -->
+     <!-- https://mvnrepository.com/artifact/org.icepdf/icepdf-core -->
+    <dependency>
+        <groupId>org.icepdf</groupId>
+        <artifactId>icepdf-core</artifactId>
+        <version>4.1-xu</version>
+    </dependency>
+     
+     <!-- https://mvnrepository.com/artifact/org.icepdf/icepdf-viewer -->
+    <dependency>
+        <groupId>org.icepdf</groupId>
+        <artifactId>icepdf-viewer</artifactId>
+        <version>4.1-xu</version>
+    </dependency>
+    <dependency>
+        <groupId>org.icepdf</groupId>
+        <artifactId>icepdf-pro-intl</artifactId>
+        <version>4.1-xu</version>
+    </dependency>
+    
+    <dependency>
+        <groupId>org.icepdf</groupId>
+        <artifactId>icepdf-pro</artifactId>
+        <version>4.1-xu</version>
+    </dependency>
+     
+  
   </dependencies>
   
   <!-- 配置tomcat插件 -->

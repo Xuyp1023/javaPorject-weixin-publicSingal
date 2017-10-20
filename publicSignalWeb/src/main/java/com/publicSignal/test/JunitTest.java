@@ -1,10 +1,13 @@
 package com.publicSignal.test;
 
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.support.BeanDefinitionRegistryPostProcessor;
 import org.springframework.context.ApplicationContext;
@@ -46,6 +49,17 @@ public class JunitTest implements ApplicationContextAware{
     public void setApplicationContext(ApplicationContext anApplicationContext) throws BeansException {
         
         this.anApplicationContext=anApplicationContext;
+    }
+    
+    @Test
+    public void runBeanFactoryUtil(){
+        
+        Map<String, NumberTest> numberTestMap = BeanFactoryUtils.beansOfTypeIncludingAncestors(anApplicationContext, NumberTest.class);
+        
+        for (Entry<String, NumberTest> entry : numberTestMap.entrySet()) {
+            System.out.println(entry.getKey()+":::"+entry.getValue());
+        }
+        
     }
 
 }

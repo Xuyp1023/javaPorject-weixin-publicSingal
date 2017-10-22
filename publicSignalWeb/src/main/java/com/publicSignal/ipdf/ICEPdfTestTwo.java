@@ -6,11 +6,11 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import org.icepdf.core.pobjects.Document;
-import org.icepdf.core.util.GraphicsRenderingHints; 
+/*import org.icepdf.core.pobjects.Document;
+import org.icepdf.core.util.GraphicsRenderingHints; */
 public class ICEPdfTestTwo {
     
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         String filePath = "D:\\中山市华莱登卫浴有限公司应收账款提前回款协议书 (5).pdf";  
         Document document = new Document();  
   
@@ -39,6 +39,6 @@ public class ICEPdfTestTwo {
             e1.printStackTrace();  
         }  
         System.out.println("======================完成============================");  
-    }
+    }*/
 
 }

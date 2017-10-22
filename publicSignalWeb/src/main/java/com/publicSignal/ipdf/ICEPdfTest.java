@@ -6,10 +6,10 @@ import java.io.File;
 import java.io.IOException;  
 import javax.imageio.ImageIO;  
   
-import org.icepdf.core.pobjects.Document;  
-import org.icepdf.core.util.GraphicsRenderingHints;
+/*import org.icepdf.core.pobjects.Document;  
+import org.icepdf.core.util.GraphicsRenderingHints;*/
 public class ICEPdfTest {
-    public static void pdf2Pic(String pdfPath, String path){  
+    /*public static void pdf2Pic(String pdfPath, String path){  
         Document document = new MyDocument();  
         document.setFile(pdfPath);  
         float scale = 2.5f;//缩放比例  
@@ -36,5 +36,5 @@ public class ICEPdfTest {
         String filePath = "D:\\中山市华莱登卫浴有限公司应收账款提前回款协议书 (5).pdf";  
         //String filePath = "C:\\Users\\xuyp\\Desktop\\spring-boot-中文参考手册.pdf";  
         pdf2Pic(filePath, "D:\\");  
-    }  
+    }  */
 }

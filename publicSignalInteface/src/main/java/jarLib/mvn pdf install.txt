@@ -1,0 +1,13 @@
+mvn install:install-file -Dfile=D:\icepdf-pro-intl-4.1-xu.jar -DgroupId=org.icepdf -DartifactId=icepdf-pro-intl -Dversion=4.1-xu -Dpackaging=jar
+
+
+
+
+mvn install:install-file -Dfile=D:\icepdf-core-4.1-xu.jar -DgroupId=org.icepdf -DartifactId=icepdf-core -Dversion=4.1-xu -Dpackaging=jar
+
+
+
+mvn install:install-file -Dfile=D:\icepdf-viewer-4.1-xu.jar -DgroupId=org.icepdf -DartifactId=icepdf-viewer -Dversion=4.1-xu -Dpackaging=jar
+
+
+mvn install:install-file -Dfile=D:\icepdf-pro-4.1-xu.jar -DgroupId=org.icepdf -DartifactId=icepdf-pro -Dversion=4.1-xu -Dpackaging=jar

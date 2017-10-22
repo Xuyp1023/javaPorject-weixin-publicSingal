@@ -3,11 +3,11 @@ package com.publicSignal.ipdf;
 /*import icepdf.cr; */ 
 import java.lang.reflect.Field;
 import org.icepdf.core.application.ProductInfo;  
-/*import org.icepdf.core.pobjects.Document;
-import org.icepdf.core.pobjects.graphics.Padding;*/
+import org.icepdf.core.pobjects.Document;
+import org.icepdf.core.pobjects.graphics.Padding;
 
-public class MyDocument /*extends Document*/ {
- /*  static {  
+public class MyDocument extends Document {
+   static {  
   
         Class<?> clazzB = ProductInfo.class;  
         
@@ -30,5 +30,5 @@ public class MyDocument /*extends Document*/ {
         } catch (Exception e) {  
             e.printStackTrace();  
         }  
-    }  */
+    }  
 }

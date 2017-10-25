@@ -121,6 +121,19 @@
         <version>4.1-xu</version>
     </dependency>
      
+     <!-- https://mvnrepository.com/artifact/aspectj/aspectjrt -->
+<dependency>
+    <groupId>aspectj</groupId>
+    <artifactId>aspectjrt</artifactId>
+    <version>1.8.1</version>
+</dependency>
+     <!-- https://mvnrepository.com/artifact/com.jcabi/jcabi-aspects -->
+<dependency>
+    <groupId>com.jcabi</groupId>
+    <artifactId>jcabi-aspects</artifactId>
+    <version>0.17.2</version>
+</dependency>
+     
   
   </dependencies>
   

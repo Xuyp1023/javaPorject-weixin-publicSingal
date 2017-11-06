@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.publicSignal.annocation.MyParam;
 import com.publicSignal.certifiont.authority.PermissionRequest;
 import com.publicSignal.mapper.PublicSignalEffectiveLog;
+import com.publicSignal.test.complex.object.UserCollections;
 import com.publicSignal.util.ProcessHandler;
 import com.publicSignal.util.ProcessHandler.ExceptionHandler;
 
@@ -55,6 +57,43 @@ public class EffectiveLogController /*implements BeanFactoryAware, BeanDefinitio
 
         System.out.println("testAnnocation...");
         return "testAnnocation";
+
+    }
+
+    @RequestMapping("/testComplexObject")
+    @ResponseBody
+    public String testComplexObject(UserCollections userCollection) {
+
+        System.out.println("testComplexObject..." + userCollection);
+        return "testComplexObject";
+
+    }
+
+    /**
+     * 测试自定义参数注解器
+     * @Title: testComplexObject 
+     * @Description: 如果有 @MyParam这个注解，则解析器的参数为null
+     * @param userCollection
+     * @return 参数说明 
+     * @throws 
+     * @author xuyp
+     * @date 2017年11月6日 上午10:31:56
+     */
+    @RequestMapping("/testParamAnno")
+    @ResponseBody
+    public String testParamAnno(@MyParam UserCollections userCollection) {
+
+        System.out.println("testParamAnno..." + userCollection);
+        return "testParamAnno";
+
+    }
+
+    @RequestMapping("/testParamAnnoNull")
+    @ResponseBody
+    public String testParamAnnoNull(Long id) {
+
+        System.out.println("testParamAnnoNull..." + id);
+        return "testParamAnnoNull";
 
     }
 

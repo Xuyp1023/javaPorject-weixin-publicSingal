@@ -31,7 +31,7 @@ public class RabbitMQDirectProduct {
         String[] serverList = { "error", "info", "warning" };
         for (int i = 0; i < serverList.length; i++) {
             String server = serverList[i];
-            String message = "HelloWorld_" + (i + 1);
+            String message = "HelloWorld_" + server + (i + 1);
 
             // 4：往特定的信道发送指定的路由键的消息
             channel.basicPublish(EXCHANGE_NAME, server, null, message.getBytes());

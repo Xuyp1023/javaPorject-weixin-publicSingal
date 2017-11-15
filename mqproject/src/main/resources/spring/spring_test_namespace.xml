@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:xuyp="http://www.xuyp.com/schema/soa" 
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+        http://www.xuyp.com/schema/soa http://www.xuyp.com/schema/soa/xuyp.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd">
+
+  <bean id="userServiceImpl" class="com.xyp.custom.schema.handler.test.UserServiceImpl"></bean>
+  
+  <xuyp:myBean class="com.xyp.custom.schema.handler.test.UserServiceImpl" name="userService"
+                id="userServiceone" scope="session"></xuyp:myBean>
+                
+  <xuyp:myImport resource="com.xyp.custom.schema.handler.test.UserServiceImpl" profile="dev"
+                encord="utf8" ></xuyp:myImport>
+</beans>

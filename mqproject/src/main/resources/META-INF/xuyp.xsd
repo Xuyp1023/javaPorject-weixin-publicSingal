@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns="http://www.xuyp.com/schema/soa"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:tool="http://www.springframework.org/schema/tool"
+	targetNamespace="http://www.xuyp.com/schema/soa"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	
+	<xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+	<xsd:import namespace="http://www.springframework.org/schema/beans"/>
+	<xsd:import namespace="http://www.springframework.org/schema/tool"/>
+    
+    <xsd:element name="myBean">
+        <xsd:complexType>
+            <xsd:attribute name="class" type="xsd:string"></xsd:attribute>
+            <xsd:attribute name="name" type="xsd:string"></xsd:attribute>
+            <xsd:attribute name="id" type="xsd:string"></xsd:attribute>
+            <xsd:attribute name="scope" type="xsd:string"></xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="myImport">
+        <xsd:complexType>
+            <xsd:attribute name="resource" type="xsd:string"></xsd:attribute>
+            <xsd:attribute name="profile" type="xsd:string"></xsd:attribute>
+            <xsd:attribute name="encord" type="xsd:string"></xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+    
+	
+	
+</xsd:schema>

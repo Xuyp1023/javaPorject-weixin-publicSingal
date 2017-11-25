@@ -104,6 +104,11 @@
 		 <artifactId>junit</artifactId>
 		 <version>4.11</version>
 		</dependency>
+		
+		<dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
   
 <!--    pdf 转图片
      https://mvnrepository.com/artifact/org.icepdf/icepdf-core -->
